@@ -1,0 +1,30 @@
+.account-detail {
+  display: flex;
+  margin: 3rem;
+  margin-bottom: 0;
+
+  /* background-color: red; */
+  gap: 4rem;
+}
+.balance {
+  flex-grow: 2;
+}
+.balance,
+.type {
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.balance p,
+.type p {
+  font-size: 1.2rem;
+  color: rgb(43, 43, 43);
+}
+.balance h4,
+.type h4 {
+  font-size: 3rem;
+  margin-top: 0.2rem;
+  font-weight: 500;
+}

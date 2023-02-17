@@ -27,7 +27,7 @@ const LoginPage = () => {
       (account) =>
         account.accountNumber.toLocaleLowerCase() === name.toLocaleLowerCase()
     );
-    console.log(account);
+    // console.log(account);
     //check if the account not matched
 
     if (!account[0]) {

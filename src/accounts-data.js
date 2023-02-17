@@ -1,8 +1,8 @@
 const ACCOUNT_DATA = [
   {
     accountNumber: "1",
-    name: "Brown",
-    FatherName: "Eyobed",
+    name: "Eyobed",
+    FatherName: "Kebede",
     age: "24",
     transaction: [300, 9000, -600, -5000, 700, 800, 2800, -4200],
     accountType: "saving",
@@ -11,7 +11,7 @@ const ACCOUNT_DATA = [
   {
     accountNumber: "2",
     name: "Heryakos",
-    FatherName: "Beanie",
+    FatherName: "Melese",
     age: "18",
     transaction: [30000, 900, -6000, -5000, 7000, -8000, 5000, -8200],
     accountType: "salary",
@@ -20,7 +20,7 @@ const ACCOUNT_DATA = [
   {
     accountNumber: "3",
     name: "Amminadab",
-    FatherName: "Cowboy",
+    FatherName: "Elias",
     age: "26",
     transaction: [6000, 900, -400, -900, 12000, -800, 2800, -4200],
     accountType: "fixed",
@@ -29,7 +29,7 @@ const ACCOUNT_DATA = [
   {
     accountNumber: "4",
     name: "Bineyam",
-    FatherName: "Brim",
+    FatherName: "Getachew",
     age: "60",
     transaction: [6300, 9000, -6000, -5000, 900, 2800, 9800, -7200],
     accountType: "recurring",

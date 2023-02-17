@@ -9,7 +9,7 @@ import ACCOUNT_DATA from "./accounts-data";
 import { UserContext } from "./context/user/user.context";
 
 function App() {
-  const { accountData, setAccountData } = useContext(AccountContext);
+  const { setAccountData } = useContext(AccountContext);
 
   useEffect(() => {
     setAccountData(ACCOUNT_DATA);

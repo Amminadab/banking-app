@@ -4,10 +4,17 @@ import { useContext } from "react";
 import { UserContext } from "../../context/user/user.context";
 
 import "./main-home.styles.css";
+import { AccountContext } from "../../context/account/account.context";
 
 const MainHome = () => {
   const { user } = useContext(UserContext);
-  const { name, accountType, transaction } = user;
+  const { accountData } = useContext(AccountContext);
+  const { accountNumber } = user;
+  const activeAccount = accountData.filter(
+    (account) => account.accountNumber === accountNumber
+  );
+  const [{ name, accountType, transaction }] = activeAccount;
+
   return (
     <section className="main-home">
       <h3 className="welcome-text">Welcome, {name} </h3>
@@ -16,7 +23,7 @@ const MainHome = () => {
         accountType={accountType}
         transaction={transaction}
       />
-      <Transaction transaction={transaction} />
+      {transaction && <Transaction transaction={transaction} />}
     </section>
   );
 };

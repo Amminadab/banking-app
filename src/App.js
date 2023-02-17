@@ -7,6 +7,7 @@ import { AccountContext } from "./context/account/account.context";
 import { useContext, useEffect } from "react";
 import ACCOUNT_DATA from "./accounts-data";
 import { UserContext } from "./context/user/user.context";
+import Process from "./routes/process/process.component";
 
 function App() {
   const { setAccountData } = useContext(AccountContext);
@@ -15,7 +16,7 @@ function App() {
     setAccountData(ACCOUNT_DATA);
   }, [setAccountData]);
 
-  // console.log(accountData);
+  // console.log(NEW_ACCOUNT_DATA);
 
   const { user } = useContext(UserContext);
   if (user !== null) {
@@ -24,7 +25,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigation />}>
           <Route index element={<Home />} />
-          <Route path="login" element={<Login />} />
+          <Route path="process" element={<Process />} />
         </Route>
       </Routes>
     );

@@ -4,10 +4,34 @@ import { createContext, useState } from "react";
 export const AccountContext = createContext({
   accountData: [],
   setAccountData: () => {},
+  transfer: () => {},
+  withdraw: () => {},
+  loan: () => {},
+  close: () => {},
+
+  status: {
+    type: "",
+    message: "",
+  },
 });
 export const AccountProvider = ({ children }) => {
   const [accountData, setAccountData] = useState([]);
-  const value = { accountData, setAccountData };
+  const [status, setStatus] = useState({
+    type: "",
+    message: "",
+  });
+
+  const withdraw = (amount) => {
+    console.log(amount);
+    //find the active user
+  };
+  const value = {
+    accountData,
+    setAccountData,
+    withdraw,
+    status,
+    setStatus,
+  };
   return (
     <AccountContext.Provider value={value}>{children}</AccountContext.Provider>
   );

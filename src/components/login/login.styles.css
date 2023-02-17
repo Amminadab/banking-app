@@ -17,11 +17,21 @@
   display: block;
 }
 .error-text {
-  background-color: rgba(207, 5, 5, 0.699);
+  background-color: rgba(207, 5, 5, 0.582);
+
   padding: 1rem 0;
   text-align: center;
   margin-top: 1.3rem;
-  border: none;
+  border: red 1px solid;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+.success-text {
+  background-color: rgba(1, 156, 40, 0.63);
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 1.3rem;
+  border: green 1px solid;
   border-radius: 10px;
   font-size: 1.2rem;
 }

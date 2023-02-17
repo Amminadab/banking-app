@@ -16,7 +16,7 @@ const Navigation = () => {
               </Link>
             </li>
             <li>
-              <Link className="link" to="/">
+              <Link className="link" to="process">
                 Process
               </Link>
             </li>

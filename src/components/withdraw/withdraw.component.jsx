@@ -1,15 +1,17 @@
 import { useContext, useState } from "react";
 import { AccountContext } from "../../context/account/account.context";
+import { UserContext } from "../../context/user/user.context";
 // import { UserContext } from "../../context/user/user.context";
 
 const Withdraw = ({ balance }) => {
   const [amount, setAmount] = useState(null);
   const { setStatus, withdraw } = useContext(AccountContext);
+  const { user } = useContext(UserContext);
 
   const withdrawClickHandler = (e) => {
     e.preventDefault();
 
-    // //check if the box is empty
+    //check if the box is empty
     if (amount === null) {
       setStatus({ type: "error", message: "WithDraw amount can not be empty" });
     }
@@ -27,7 +29,7 @@ const Withdraw = ({ balance }) => {
         message: "you can not withdrawal less than 100 Birr",
       });
     } else if (100 < amount < balance) {
-      withdraw(amount);
+      withdraw(amount, user);
       setStatus({ type: "success", message: "Successfully Withdrawal" });
     } else {
       setStatus({ type: "error", message: "something went wrong" });

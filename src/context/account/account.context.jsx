@@ -21,8 +21,24 @@ export const AccountProvider = ({ children }) => {
     message: "",
   });
 
-  const withdraw = (amount) => {
-    console.log(amount);
+  const withdraw = (amount, user) => {
+    const { accountNumber } = user;
+
+    const newAccountData = accountData.map((account) =>
+      account.accountNumber === accountNumber
+        ? { ...account, transaction: [...account.transaction, -amount] }
+        : account
+    );
+    setAccountData(newAccountData);
+    console.log(newAccountData);
+
+    // console.log(activeAccount);
+
+    // const accountWithdraw = {...accountWithdraw , activeAccount.transaction.push(-amount)}
+    // console.log(accountWithdraw);
+
+    //addingthe
+
     //find the active user
   };
   const value = {

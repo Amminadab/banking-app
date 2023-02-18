@@ -10,8 +10,16 @@ import "./process-account.styles.css";
 
 const ProcessAccount = () => {
   const { user } = useContext(UserContext);
+  const { accountNumber } = user;
+
+  const { accountData } = useContext(AccountContext);
+  const [activeAccount] = accountData.filter(
+    (account) => account.accountNumber === accountNumber
+  );
+  const { name, accountType, transaction } = activeAccount;
+
   const { status } = useContext(AccountContext);
-  const { name, accountType, transaction } = user;
+  // const { name, accountType, transaction } = user;
   const balance = transaction.reduce((acc, num) => acc + num);
   // console.log(balance);
 

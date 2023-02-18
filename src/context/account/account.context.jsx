@@ -21,6 +21,7 @@ export const AccountProvider = ({ children }) => {
     message: "",
   });
 
+  //withdraw handler
   const withdraw = (amount, user) => {
     const { accountNumber } = user;
 
@@ -35,7 +36,7 @@ export const AccountProvider = ({ children }) => {
       message: `Successfully Withdraw ${amount} Birr`,
     });
   };
-
+  //transfer handler
   const transfer = (amount, user, acc) => {
     //    console.log(amount, user, account);
     const { accountNumber } = user;
@@ -56,6 +57,7 @@ export const AccountProvider = ({ children }) => {
     });
   };
 
+  //loan handler
   const loan = (amount, user) => {
     const newAccountData = accountData.map((account) =>
       account.accountNumber === user.accountNumber
@@ -69,8 +71,15 @@ export const AccountProvider = ({ children }) => {
     });
   };
 
-  const close = (account, pin, user) => {
-    console.log(account, pin, user);
+  //close handler
+  const close = (user) => {
+    const newAccountData = accountData.filter((account) => {
+      if (user.accountNumber !== account.accountNumber) {
+        return { ...account };
+      }
+    });
+
+    setAccountData(newAccountData);
   };
 
   const value = {

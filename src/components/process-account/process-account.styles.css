@@ -4,8 +4,34 @@
   border: 1px solid black;
   border-radius: 12px;
   height: 27rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .processes {
+  border: 1px black solid;
+
+  /* margin: auto; */
+}
+/* .process {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+
+} */
+.processes h4 {
+  /* font-size: 1.6rem;
+  margin: 1rem 0;
+  text-align: center; */
+}
+.processes button {
+  /* font-size: 1.2rem;
+  margin: 1rem auto;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600; */
 }
 .processes-detail {
+}
+.processes-detail label,
+.processes-detail button {
+  /* display: block; */
 }

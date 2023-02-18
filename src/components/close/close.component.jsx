@@ -1,10 +1,13 @@
 import { useContext, useState } from "react";
+
+import { useNavigate } from "react-router-dom";
 import { AccountContext } from "../../context/account/account.context";
 import { UserContext } from "../../context/user/user.context";
 
 const Close = () => {
-  const { setStatus, accountData } = useContext(AccountContext);
-  const { user } = useContext(UserContext);
+  const { setStatus, accountData, close } = useContext(AccountContext);
+  const navigate = useNavigate();
+  const { user, setUser } = useContext(UserContext);
   const [inputValues, setInputValues] = useState({
     account: "",
     pin: "",
@@ -25,14 +28,33 @@ const Close = () => {
         message: "The fields can't be empty and can't be alphabets characters",
       });
     }
-
     //check if the account number correct
+    else if (account !== Number(accountToClose.accountNumber)) {
+      setStatus({
+        type: "error",
+        message: "Account number doesn't match with Your's",
+      });
+    }
+    //checking if password match
+    else if (pin !== Number(accountToClose.pin)) {
+      setStatus({
+        type: "error",
+        message: "Account password doesn't match ",
+      });
+    } else if (
+      pin === Number(accountToClose.pin) &&
+      account === Number(accountToClose.accountNumber)
+    ) {
+      close(user);
+      setUser(null);
+      navigate("/");
+    }
   };
 
   const closeChangeHandler = (e) => {
     const { target } = e;
     const { name, value } = target;
-    setInputValues({ ...inputValues, [name]: value });
+    setInputValues({ ...inputValues, [name]: Number(value) });
   };
   return (
     <div className="processes">

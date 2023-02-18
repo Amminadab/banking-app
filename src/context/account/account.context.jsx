@@ -30,21 +30,56 @@ export const AccountProvider = ({ children }) => {
         : account
     );
     setAccountData(newAccountData);
-    console.log(newAccountData);
-
-    // console.log(activeAccount);
-
-    // const accountWithdraw = {...accountWithdraw , activeAccount.transaction.push(-amount)}
-    // console.log(accountWithdraw);
-
-    //addingthe
-
-    //find the active user
+    setStatus({
+      type: "success",
+      message: `Successfully Withdraw ${amount} Birr`,
+    });
   };
+
+  const transfer = (amount, user, acc) => {
+    //    console.log(amount, user, account);
+    const { accountNumber } = user;
+
+    const newAccountData = accountData.map((account) => {
+      if (account.accountNumber === accountNumber) {
+        return { ...account, transaction: [...account.transaction, -amount] };
+      } else if (account.accountNumber === String(acc)) {
+        return { ...account, transaction: [...account.transaction, amount] };
+      } else {
+        return { ...account };
+      }
+    });
+    setAccountData(newAccountData);
+    setStatus({
+      type: "success",
+      message: `Successfully Transferred ${amount} Birr`,
+    });
+  };
+
+  const loan = (amount, user) => {
+    const newAccountData = accountData.map((account) =>
+      account.accountNumber === user.accountNumber
+        ? { ...account, transaction: [...account.transaction, Number(amount)] }
+        : { ...account }
+    );
+    setAccountData(newAccountData);
+    setStatus({
+      type: "success",
+      message: `Successful loan of ${amount} Birr`,
+    });
+  };
+
+  const close = (account, pin, user) => {
+    console.log(account, pin, user);
+  };
+
   const value = {
     accountData,
     setAccountData,
     withdraw,
+    transfer,
+    loan,
+    close,
     status,
     setStatus,
   };

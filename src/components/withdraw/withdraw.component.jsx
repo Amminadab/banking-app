@@ -1,10 +1,9 @@
 import { useContext, useState } from "react";
 import { AccountContext } from "../../context/account/account.context";
 import { UserContext } from "../../context/user/user.context";
-// import { UserContext } from "../../context/user/user.context";
 
 const Withdraw = ({ balance }) => {
-  const [amount, setAmount] = useState(null);
+  const [amount, setAmount] = useState("");
   const { setStatus, withdraw } = useContext(AccountContext);
   const { user } = useContext(UserContext);
 
@@ -12,8 +11,11 @@ const Withdraw = ({ balance }) => {
     e.preventDefault();
 
     //check if the box is empty
-    if (amount === null) {
-      setStatus({ type: "error", message: "WithDraw amount can not be empty" });
+    if (amount === null || amount === "") {
+      setStatus({
+        type: "error",
+        message: "The fields can't be empty and can't be alphabets characters",
+      });
     }
     //the amount is less than what he have
     else if (balance < amount) {
@@ -26,17 +28,25 @@ const Withdraw = ({ balance }) => {
     else if (100 > amount) {
       setStatus({
         type: "error",
-        message: "you can not withdrawal less than 100 Birr",
+        message: "You can not withdrawal less than 100 Birr",
       });
     } else if (100 < amount < balance) {
       withdraw(amount, user);
-      setStatus({ type: "success", message: "Successfully Withdrawal" });
+      document.querySelector("#withdraw-amm").value = "";
+      setAmount("");
     } else {
-      setStatus({ type: "error", message: "something went wrong" });
+      setStatus({
+        type: "error",
+        message: "The fields can't be empty and can't be alphabets characters",
+      });
     }
   };
   const withdrawChangeHandler = (e) => {
-    setAmount(Number(e.target.value));
+    if (e.target.value === "") {
+      setAmount(e.target.value);
+    } else {
+      setAmount(Number(e.target.value));
+    }
   };
 
   return (

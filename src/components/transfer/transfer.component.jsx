@@ -83,7 +83,7 @@ const Transfer = ({ balance }) => {
   };
 
   return (
-    <div className="processes">
+    <div className="processes transfer">
       <h4>Transfer TO Account</h4>
       <div className="processes-detail">
         <label htmlFor="transfer-acc">Account</label>

@@ -50,7 +50,7 @@ const Withdraw = ({ balance }) => {
   };
 
   return (
-    <form className="processes">
+    <form className="processes withdraw">
       <h4>Withdraw Money</h4>
       <div className="processes-detail">
         <label htmlFor="withdraw-amm">Amount</label>

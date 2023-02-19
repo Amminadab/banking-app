@@ -57,19 +57,19 @@ const Close = () => {
     setInputValues({ ...inputValues, [name]: Number(value) });
   };
   return (
-    <div className="processes">
+    <div className="processes close">
       <h4>Close Account</h4>
       <div className="processes-detail">
         <label htmlFor="close-acc">Account</label>
         <input
-          type="text"
+          type="number"
           name="account"
           onChange={closeChangeHandler}
           id="close-acc"
         />
         <label htmlFor="close-pin">PIN</label>
         <input
-          type="text"
+          type="number"
           name="pin"
           onChange={closeChangeHandler}
           id="close-pin"

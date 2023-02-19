@@ -53,7 +53,7 @@ const Loan = () => {
     }
   };
   return (
-    <div className="processes">
+    <div className="processes loan">
       <h4>Request Loan</h4>
       <div className="processes-detail">
         <label htmlFor="request-amm">Amount</label>

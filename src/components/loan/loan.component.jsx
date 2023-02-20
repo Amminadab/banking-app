@@ -57,7 +57,7 @@ const Loan = () => {
       <h4>Request Loan</h4>
       <div className="processes-detail">
         <label htmlFor="request-amm">Amount</label>
-        <input type="text" onChange={loanChangeHandler} id="request-amm" />
+        <input type="number" onChange={loanChangeHandler} id="request-amm" />
         <button onClick={loanClickHandler}>Request</button>
       </div>
     </div>

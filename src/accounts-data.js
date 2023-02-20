@@ -7,6 +7,7 @@ const ACCOUNT_DATA = [
     transaction: [300, 9000, -600, -5000, 700, 800, 2800, -4200],
     accountType: "saving",
     pin: "1234",
+    gender: "male",
   },
   {
     accountNumber: "2",
@@ -16,6 +17,8 @@ const ACCOUNT_DATA = [
     transaction: [30000, 900, -6000, -5000, 7000, -8000, 5000, -8200],
     accountType: "salary",
     pin: "1234",
+    country: "ethiopia",
+    gender: "male",
   },
   {
     accountNumber: "3",
@@ -25,6 +28,8 @@ const ACCOUNT_DATA = [
     transaction: [6000, 900, -400, -900, 12000, -800, 2800, -4200],
     accountType: "fixed",
     pin: "1234",
+    country: "ethiopia",
+    gender: "male",
   },
   {
     accountNumber: "4",
@@ -34,6 +39,8 @@ const ACCOUNT_DATA = [
     transaction: [6300, 9000, -6000, -5000, 900, 2800, 9800, -7200],
     accountType: "recurring",
     pin: "1234",
+    country: "ethiopia",
+    gender: "male",
   },
 ];
 

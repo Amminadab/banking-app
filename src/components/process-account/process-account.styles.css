@@ -3,10 +3,10 @@
   margin-top: 2rem;
   border: 1px solid rgb(31, 31, 31);
   border-radius: 12px;
-  height: 36rem;
+  height: 58rem;
   display: grid;
-  gap: 0.5rem;
-  padding: 0.5rem;
+  gap: 1rem;
+  padding: 1rem;
   grid-template-columns: repeat(2, 1fr);
 }
 .processes {
@@ -22,14 +22,15 @@
 }
 
 .processes h4 {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 800;
   display: inline-block;
 }
 .processes button {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: center;
-  padding: 0.7rem 1.4rem;
+  padding: 1rem 2.5rem;
+  margin-top: 2rem;
   font-weight: 600;
   align-self: center;
   background-color: rgb(153, 153, 153);
@@ -42,7 +43,7 @@
   color: white;
 }
 .processes-detail {
-  margin-top: 0.8rem;
+  margin-top: 2.6rem;
   display: flex;
   flex-direction: column;
 
@@ -53,20 +54,21 @@
   display: block;
 }
 .processes-detail label {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  margin-bottom: 0.2rem;
-  margin-left: 0.2rem;
+  margin-bottom: 0.4rem;
+  margin-left: 0.4rem;
 }
 .processes-detail input {
-  max-width: 20rem;
-  height: 2.4rem;
+  max-width: 25rem;
+  font-size: 1.6rem;
+  height: 3.4rem;
   border: 0.51px rgb(31, 31, 31) solid;
   border-radius: 3px;
   padding-left: 0.6rem;
 }
 .processes-detail > input {
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.2rem;
 }
 .transfer {
   background-color: rgb(163, 163, 163);

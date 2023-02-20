@@ -39,7 +39,7 @@
 }
 .form .user-details .input-box {
   margin-bottom: 1.5rem;
-  width: calc(100% / 2 - 2rem);
+  /* width: calc(100% / 2 - 2rem); */
 }
 .form .input-box span.details {
   display: block;
@@ -99,12 +99,12 @@
   display: none;
 }
 .form .button {
-  height: 4rem;
+  height: 4.5rem;
   margin: 2.5rem 0;
 }
 .form .button input {
   height: 100%;
-  width: 100%;
+  max-width: 100%;
   border-radius: 0.5rem;
   border: none;
   color: #fff;
@@ -135,7 +135,7 @@
   }
   .form .user-details .input-box {
     margin-bottom: 1.5rem;
-    width: 100%;
+    max-width: 100%;
   }
   .form .category {
     width: 100%;

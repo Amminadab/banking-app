@@ -9,8 +9,8 @@ import "./signup.styles.css";
 const SignUp = () => {
   const navigate = useNavigate();
   const { setUser } = useContext(UserContext);
-  const randomAccountNumber = Math.trunc(Math.random() * 10000) + 1;
   const { accountData, setAccountData } = useContext(AccountContext);
+  const randomAccountNumber = Math.trunc(Math.random() * 10000) + 1;
   const [inputValues, setInputValues] = useState({
     accountNumber: String(randomAccountNumber),
     name: "",
@@ -97,7 +97,7 @@ const SignUp = () => {
       else if (inputValues.pin !== conPin) {
         setError("you PIN doesn't match ");
       } else {
-        console.log(inputValues);
+        // console.log(inputValues);
         setAccountData([...accountData, { ...inputValues }]);
         setUser({ ...inputValues });
         navigate("/");

@@ -1,5 +1,5 @@
 import "./login.styles.css";
-import logo from "../../assets/user-solid.svg";
+
 import { useContext, useState } from "react";
 import { AccountContext } from "../../context/account/account.context";
 import { UserContext } from "../../context/user/user.context";
@@ -58,36 +58,52 @@ const LoginPage = () => {
     }
   };
   return (
-    <div className="wrapper">
-      <form className="login-container">
-        <img className="login-logo" src={logo} alt="user svg" />
-        {error && <p className="error-text">{error}</p>}
-        <div className="login-name">
-          <label htmlFor="name">Account Number</label>
-          <input
-            type="text"
-            className="login-box"
-            id="name"
-            name="name"
-            placeholder="Name"
-            onChange={textChangeHandler}
-          />
+    <div className="body">
+      <div class="center">
+        <div class="container">
+          <label
+            for="show"
+            class="close-btn fas fa-times"
+            title="close"
+          ></label>
+          <div class="text">Login</div>
+          {error && <p className="error-text">{error}</p>}
+          <form action="#">
+            <div class="data">
+              <label>Account Number</label>
+              <input
+                type="text"
+                className="login-box"
+                id="name"
+                name="name"
+                placeholder="Account"
+                onChange={textChangeHandler}
+              />
+            </div>
+            <div class="data passer">
+              <label>PIN</label>
+              <input
+                type="password"
+                name="pin"
+                onChange={textChangeHandler}
+                className="login-box"
+                id="pin"
+                placeholder="PIN"
+              />
+            </div>
+            <div class="forgot-pass">a</div>
+            <div class="btn">
+              <div class="inner"></div>
+              <button type="submit" class="button" onClick={loginClickHandler}>
+                login
+              </button>
+            </div>
+            <div class="signup-link">
+              {/* Not a member? <a href="#">Signup now</a> */}
+            </div>
+          </form>
         </div>
-        <div className="login-pin">
-          <label htmlFor="pin">PIN</label>
-          <input
-            type="password"
-            name="pin"
-            onChange={textChangeHandler}
-            className="login-box"
-            id="pin"
-            placeholder="pin"
-          />
-        </div>
-        <button onClick={loginClickHandler} className="login-btn">
-          Login
-        </button>
-      </form>
+      </div>
     </div>
   );
 };

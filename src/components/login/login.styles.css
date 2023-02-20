@@ -117,7 +117,6 @@ form .signup-link a:hover {
   text-decoration: underline;
 }
 .button:hover {
-  /* trans.form: scale(0.99); */
   background: rgb(63, 63, 63);
 }
 .forgot-pass {

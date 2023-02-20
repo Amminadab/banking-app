@@ -9,6 +9,7 @@ import ACCOUNT_DATA from "./accounts-data";
 import { UserContext } from "./context/user/user.context";
 import Process from "./routes/process/process.component";
 import SignUp from "./components/signup/signup.component";
+import Profiles from "./routes/profiles/profiles.component";
 
 function App() {
   const { setAccountData } = useContext(AccountContext);
@@ -28,6 +29,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="process" element={<Process />} />
           <Route path="signup" element={<SignUp />} />
+          <Route path="profile" element={<Profiles />} />
         </Route>
       </Routes>
     );

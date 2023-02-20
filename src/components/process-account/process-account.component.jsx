@@ -29,6 +29,7 @@ const ProcessAccount = () => {
         name={name}
         accountType={accountType}
         transaction={transaction}
+        accountNumber={accountNumber}
       />
 
       {/* {error && <p className="error-text margin-m">{error}</p>}

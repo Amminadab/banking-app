@@ -22,6 +22,7 @@ const MainHome = () => {
         name={name}
         accountType={accountType}
         transaction={transaction}
+        accountNumber={accountNumber}
       />
       {transaction && <Transaction transaction={transaction} />}
     </section>

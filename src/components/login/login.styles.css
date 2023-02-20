@@ -108,12 +108,17 @@ form .btn button {
 }
 form .signup-link {
   text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 1.4rem;
 }
-form .signup-link a {
+form .signup-link p {
+  padding-left: 0.6rem;
+  display: inline;
+  font-size: 1.3rem;
   color: #3498db;
   text-decoration: none;
 }
-form .signup-link a:hover {
+form .signup-link p:hover {
   text-decoration: underline;
 }
 .button:hover {

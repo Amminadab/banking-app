@@ -3,8 +3,10 @@ import "./login.styles.css";
 import { useContext, useState } from "react";
 import { AccountContext } from "../../context/account/account.context";
 import { UserContext } from "../../context/user/user.context";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
+  const navigate = useNavigate();
   const [loginInfo, setLoginInfo] = useState({
     name: "",
     pin: "",
@@ -59,17 +61,17 @@ const LoginPage = () => {
   };
   return (
     <div className="body">
-      <div class="center">
-        <div class="container">
+      <div className="center">
+        <div className="container">
           <label
-            for="show"
-            class="close-btn fas fa-times"
+            htmlFor="show"
+            className="close-btn fas fa-times"
             title="close"
           ></label>
-          <div class="text">Login</div>
+          <div className="text">Login</div>
           {error && <p className="error-text">{error}</p>}
           <form action="#">
-            <div class="data">
+            <div className="data">
               <label>Account Number</label>
               <input
                 type="text"
@@ -80,7 +82,7 @@ const LoginPage = () => {
                 onChange={textChangeHandler}
               />
             </div>
-            <div class="data passer">
+            <div className="data passer">
               <label>PIN</label>
               <input
                 type="password"
@@ -91,15 +93,26 @@ const LoginPage = () => {
                 placeholder="PIN"
               />
             </div>
-            <div class="forgot-pass">a</div>
-            <div class="btn">
-              <div class="inner"></div>
-              <button type="submit" class="button" onClick={loginClickHandler}>
+            <div className="forgot-pass">a</div>
+            <div className="btn">
+              <div className="inner"></div>
+              <button
+                type="submit"
+                className="button"
+                onClick={loginClickHandler}
+              >
                 login
               </button>
             </div>
-            <div class="signup-link">
-              {/* Not a member? <a href="#">Signup now</a> */}
+            <div className="signup-link">
+              Not a member
+              <p
+                onClick={() => {
+                  navigate("/signup");
+                }}
+              >
+                Signup now
+              </p>
             </div>
           </form>
         </div>

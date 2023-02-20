@@ -233,6 +233,16 @@ const SignUp = () => {
                 value="Sign Up"
               />
             </div>
+            <div className="signup-link">
+              a member
+              <p
+                onClick={() => {
+                  navigate("/");
+                }}
+              >
+                Login now
+              </p>
+            </div>
           </form>
         </div>
       </div>

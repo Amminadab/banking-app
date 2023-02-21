@@ -51,27 +51,6 @@ const SignUp = () => {
     } else {
       e.preventDefault();
 
-      // e.preventDefault();
-      //accountNUmber Randomized
-
-      // const randomNumberGenerator = () => {
-      //   let randomAccountNumber = Math.trunc(Math.random() * 10000) + 1;
-      //   return randomAccountNumber;
-      // };
-      // let newRandomNumber = randomNumberGenerator();
-      // for (let item of Object.values(accountData)) {
-      //   if (String(newRandomNumber) === item.accountNumber) {
-      //     newRandomNumber = randomNumberGenerator();
-      //   }
-      // }
-      // console.log(newRandomNumber);
-
-      // setInputValues({
-      //   ...inputValues,
-      //   accountNumber: String(newRandomNumber),
-      // });
-      // console.log(inputValues);
-
       //name cant include number characters
 
       if (/\d/.test(inputValues.name) || /\d/.test(inputValues.FatherName)) {
@@ -84,7 +63,7 @@ const SignUp = () => {
       }
       // initial deposit must be over 100
       else if (
-        inputValues.transaction[0] < 99 ||
+        inputValues.transaction[0] <= 99 ||
         inputValues.transaction[0] > 1000000
       ) {
         setError("you initial deposit can't be under 100 and over a million ");
@@ -157,7 +136,7 @@ const SignUp = () => {
                 </select>
               </div>
               <div className="input-box">
-                <span className="details">Country</span>
+                <span className="details">Birth Place</span>
                 <input
                   type="text"
                   name="country"
@@ -233,9 +212,10 @@ const SignUp = () => {
                 value="Sign Up"
               />
             </div>
-            <div className="signup-link">
+            <div className="signup-linker">
               a member
               <p
+                className="prp"
                 onClick={() => {
                   navigate("/");
                 }}

@@ -1,4 +1,6 @@
 .header-main {
+  padding: 1rem 5rem;
+  background-color: rgba(80, 163, 142, 0.274);
   display: flex;
   justify-content: space-between;
   height: 8rem;
@@ -27,7 +29,7 @@
   transition: all 0.4s;
 }
 .link:hover {
-  background-color: rgb(122, 0, 122);
+  background-color: rgb(15, 118, 136);
   color: rgb(255, 255, 255);
-  padding: 1rem 4rem;
+  padding: 1rem 2.5rem;
 }

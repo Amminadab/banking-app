@@ -1,11 +1,14 @@
 import { useContext } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/user/user.context";
 import "./navigation.styles.css";
 
 const Navigation = () => {
   const { setUser } = useContext(UserContext);
+
+  const navigate = useNavigate();
   const logout = () => {
+    navigate("/");
     setUser(null);
   };
   return (

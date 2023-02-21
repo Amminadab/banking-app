@@ -8,6 +8,7 @@ const ACCOUNT_DATA = [
     accountType: "saving",
     pin: "1234",
     gender: "male",
+    country: "ethiopia",
   },
   {
     accountNumber: "2",

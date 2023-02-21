@@ -10,7 +10,7 @@ const Account = ({ accountType, transaction, accountNumber }) => {
       </div>
       <div className="type">
         <p>Account Number</p>
-        <h4>{accountNumber}</h4>
+        <h4 className="account-number">{accountNumber}</h4>
       </div>
       <div className="type">
         <p>Account Type</p>

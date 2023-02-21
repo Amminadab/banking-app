@@ -70,7 +70,7 @@ const LoginPage = () => {
           ></label>
           <div className="text">Login</div>
           {error && <p className="error-text">{error}</p>}
-          <form action="#">
+          <form className="login-form" action="#">
             <div className="data">
               <label>Account Number</label>
               <input

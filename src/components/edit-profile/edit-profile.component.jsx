@@ -1,12 +1,14 @@
 import { useContext } from "react";
 import { useState } from "react";
 import { AccountContext } from "../../context/account/account.context";
+
 import "./edit-profile.styles.css";
+import "./edit-profile.query.css";
 
 const EditProfile = ({ activeAccount }) => {
   const { accountData, setAccountData } = useContext(AccountContext);
 
-  //reciving account information
+  //receiving account information
   const { accountNumber, name, FatherName, age, accountType, country } =
     activeAccount;
   const [inputValues, setInputValues] = useState({
@@ -41,7 +43,7 @@ const EditProfile = ({ activeAccount }) => {
           message: "age can't be under 18 ",
         });
       } else {
-        //seting the new accunt information
+        //setting the new account information
 
         const newAccountData = accountData.map((account) =>
           account.accountNumber === accountNumber
@@ -50,9 +52,6 @@ const EditProfile = ({ activeAccount }) => {
         );
 
         setAccountData([...newAccountData]);
-        document.querySelector(".input1").value = "";
-        document.querySelector(".input2").value = "";
-        document.querySelector(".input3").value = "";
 
         setInputValues({
           name: "",
@@ -85,6 +84,7 @@ const EditProfile = ({ activeAccount }) => {
             className="input1"
             onChange={editProfileChangeHandler}
             placeholder={name}
+            value={inputValues.name}
             required
           />
         </div>
@@ -96,6 +96,7 @@ const EditProfile = ({ activeAccount }) => {
             className="input2"
             onChange={editProfileChangeHandler}
             placeholder={FatherName}
+            value={inputValues.FatherName}
             required
           />
         </div>
@@ -110,6 +111,7 @@ const EditProfile = ({ activeAccount }) => {
             name="age"
             onChange={editProfileChangeHandler}
             placeholder={age}
+            value={inputValues.age}
             className="input3"
             required
           />

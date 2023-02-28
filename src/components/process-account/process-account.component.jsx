@@ -6,7 +6,9 @@ import Close from "../close/close.component";
 import Loan from "../loan/loan.component";
 import Transfer from "../transfer/transfer.component";
 import Withdraw from "../withdraw/withdraw.component";
+
 import "./process-account.styles.css";
+import "./process-account.query.css";
 
 const ProcessAccount = () => {
   const { user } = useContext(UserContext);
@@ -19,9 +21,7 @@ const ProcessAccount = () => {
   const { name, accountType, transaction } = activeAccount;
 
   const { status } = useContext(AccountContext);
-  // const { name, accountType, transaction } = user;
   const balance = transaction.reduce((acc, num) => acc + num);
-  // console.log(balance);
 
   return (
     <div className="main-home">
@@ -32,8 +32,6 @@ const ProcessAccount = () => {
         accountNumber={accountNumber}
       />
 
-      {/* {error && <p className="error-text margin-m">{error}</p>}
-      {success && <p className="success-text margin-m">{success}</p>} */}
       {status.type && (
         <p className={`${status.type}-text margin-m`}>{status.message}</p>
       )}

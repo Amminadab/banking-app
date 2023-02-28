@@ -11,7 +11,6 @@ const Transfer = ({ balance }) => {
     amount: "",
   });
 
-  // const [accountToTransferTo, setAccountToTransferTo] = useState("");
   const { account, amount } = inputValues;
 
   const transferClickHandler = (e) => {
@@ -20,9 +19,6 @@ const Transfer = ({ balance }) => {
     const [accountToTransferTo] = accountData.filter((accountTo) => {
       return accountTo.accountNumber === String(account);
     });
-
-    // console.log(account);
-    // console.log(amount, account);
 
     // empty field control
     if (account === "" || amount === "") {
@@ -63,9 +59,6 @@ const Transfer = ({ balance }) => {
       transfer(amount, user, account);
 
       setInputValues({ account: "", amount: "" });
-
-      document.querySelector("#transfer-amm").value = "";
-      document.querySelector("#transfer-acc").value = "";
     } else {
       setStatus({ type: "error", message: "something went wrong" });
     }
@@ -92,6 +85,7 @@ const Transfer = ({ balance }) => {
           name="account"
           onChange={inputChangeHandler}
           id="transfer-acc"
+          value={inputValues.account}
         />
         <label htmlFor="transfer-amm">Amount</label>
         <input
@@ -99,6 +93,7 @@ const Transfer = ({ balance }) => {
           name="amount"
           onChange={inputChangeHandler}
           id="transfer-amm"
+          value={inputValues.amount}
         />
         <button onClick={transferClickHandler}>Transfer</button>
       </div>

@@ -1,0 +1,6 @@
+@media (max-width: 56.25em) {
+  .profile-flex {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}

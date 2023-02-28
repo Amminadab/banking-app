@@ -1,0 +1,8 @@
+@media (max-width: 31.25em) {
+  .content .form .user-details {
+    display: block;
+  }
+  .form .user-details .input-box {
+    width: 100%;
+  }
+}

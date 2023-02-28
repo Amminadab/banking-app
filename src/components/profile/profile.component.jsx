@@ -3,7 +3,9 @@ import { AccountContext } from "../../context/account/account.context";
 import { UserContext } from "../../context/user/user.context";
 import ChangePin from "../change-pin/change-pin.component";
 import EditProfile from "../edit-profile/edit-profile.component";
+
 import "./profile.styles.css";
+import "./profile.query.css";
 
 const Profile = () => {
   const { accountData } = useContext(AccountContext);

@@ -1,4 +1,6 @@
 import "./transaction.styles.css";
+import "./transaction.query.css";
+import TransactionField from "../transaction-field/transaction-field.component";
 
 const Transaction = ({ transaction }) => {
   const tr = "deposit";
@@ -7,16 +9,19 @@ const Transaction = ({ transaction }) => {
 
   return (
     <div className="transaction">
-      {transaction.map((t) => {
+      {transaction.map((t, index) => {
         if (t > 0) {
           transactionType = tr;
         } else {
           transactionType = wd;
         }
         return (
-          <div className={`each-transaction ${transactionType}`} key={t}>
-            <p className={`transaction-type `}>{transactionType}</p>
-            <h2 className="transaction-amount">{t} birr</h2>
+          <div key={index}>
+            <TransactionField
+              transactionType={transactionType}
+              t={t}
+              key={index}
+            />
           </div>
         );
       })}

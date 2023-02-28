@@ -1,0 +1,6 @@
+@media (max-width: 34.25em) {
+  .edit-profile {
+    display: flex;
+    flex-direction: column;
+  }
+}

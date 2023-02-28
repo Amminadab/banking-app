@@ -73,8 +73,11 @@ export const AccountProvider = ({ children }) => {
 
   //close handler
   const close = (user) => {
-    const newAccountData = accountData.filter((account) => {
-      if (user.accountNumber !== account.accountNumber) {
+    const closed = "closed";
+    const newAccountData = accountData.map((account) => {
+      if (user.accountNumber === account.accountNumber) {
+        return { ...account, state: closed };
+      } else {
         return { ...account };
       }
     });

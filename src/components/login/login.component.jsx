@@ -1,9 +1,10 @@
-import "./login.styles.css";
-
 import { useContext, useState } from "react";
 import { AccountContext } from "../../context/account/account.context";
 import { UserContext } from "../../context/user/user.context";
 import { useNavigate } from "react-router-dom";
+
+import "./login.styles.css";
+import "./login.query.css";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -34,6 +35,10 @@ const LoginPage = () => {
 
     if (!account[0]) {
       setError("There is no account with this AccountNo");
+    }
+    //check if the account is closed
+    else if (account[0].state === "closed") {
+      setError("Account is closed");
     }
     //check if the account password match
     else {

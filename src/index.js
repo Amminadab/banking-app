@@ -5,6 +5,7 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { AccountProvider } from "./context/account/account.context";
 import { UserProvider } from "./context/user/user.context";
+import "./index.query.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -9,6 +9,7 @@ const ACCOUNT_DATA = [
     pin: "1234",
     gender: "male",
     country: "ethiopia",
+    state: "open",
   },
   {
     accountNumber: "2",
@@ -20,6 +21,7 @@ const ACCOUNT_DATA = [
     pin: "1234",
     country: "ethiopia",
     gender: "male",
+    state: "open",
   },
   {
     accountNumber: "3",
@@ -31,6 +33,7 @@ const ACCOUNT_DATA = [
     pin: "1234",
     country: "ethiopia",
     gender: "male",
+    state: "open",
   },
   {
     accountNumber: "4",
@@ -42,6 +45,7 @@ const ACCOUNT_DATA = [
     pin: "1234",
     country: "ethiopia",
     gender: "male",
+    state: "open",
   },
 ];
 

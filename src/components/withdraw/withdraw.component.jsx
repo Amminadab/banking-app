@@ -32,7 +32,6 @@ const Withdraw = ({ balance }) => {
       });
     } else if (100 < amount < balance) {
       withdraw(amount, user);
-      document.querySelector("#withdraw-amm").value = "";
       setAmount("");
     } else {
       setStatus({
@@ -58,6 +57,7 @@ const Withdraw = ({ balance }) => {
           type="number"
           onChange={withdrawChangeHandler}
           id="withdraw-amm"
+          value={amount}
         />
         <button onClick={withdrawClickHandler}>Withdraw</button>
       </div>

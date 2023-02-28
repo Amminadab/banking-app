@@ -2,9 +2,10 @@ import Account from "../account/account.component";
 import Transaction from "../transaction/transaction.component";
 import { useContext } from "react";
 import { UserContext } from "../../context/user/user.context";
+import { AccountContext } from "../../context/account/account.context";
 
 import "./main-home.styles.css";
-import { AccountContext } from "../../context/account/account.context";
+import "./main-home.query.css";
 
 const MainHome = () => {
   const { user } = useContext(UserContext);

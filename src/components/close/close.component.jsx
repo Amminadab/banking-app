@@ -66,6 +66,7 @@ const Close = () => {
           name="account"
           onChange={closeChangeHandler}
           id="close-acc"
+          value={inputValues.account}
         />
         <label htmlFor="close-pin">PIN</label>
         <input
@@ -73,6 +74,7 @@ const Close = () => {
           name="pin"
           onChange={closeChangeHandler}
           id="close-pin"
+          value={inputValues.pin}
         />
         <button onClick={closeClickHandler}>Close</button>
       </div>

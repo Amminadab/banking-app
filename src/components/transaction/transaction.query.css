@@ -1,0 +1,10 @@
+@media (max-width: 50.62em) {
+  .transaction {
+    height: 42rem;
+  }
+}
+@media (max-width: 40.62em) {
+  .transaction {
+    height: 46rem;
+  }
+}

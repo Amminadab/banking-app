@@ -35,7 +35,6 @@ const Loan = () => {
     // if valid
     else if (amount < 10000) {
       loan(amount, user);
-      document.querySelector("#request-amm").value = "";
       setAmount("");
     } else {
       setStatus({
@@ -57,7 +56,12 @@ const Loan = () => {
       <h4>Request Loan</h4>
       <div className="processes-detail">
         <label htmlFor="request-amm">Amount</label>
-        <input type="number" onChange={loanChangeHandler} id="request-amm" />
+        <input
+          type="number"
+          onChange={loanChangeHandler}
+          id="request-amm"
+          value={amount}
+        />
         <button onClick={loanClickHandler}>Request</button>
       </div>
     </div>

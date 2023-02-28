@@ -21,6 +21,7 @@ input[type="checkbox"] {
   background: #fff;
   width: 41rem;
   padding: 30px;
+
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 #show:checked ~ .container {

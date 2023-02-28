@@ -5,6 +5,7 @@ import { AccountContext } from "../../context/account/account.context";
 import { UserContext } from "../../context/user/user.context";
 
 import "./signup.styles.css";
+import "./signup.query.css";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -19,6 +20,8 @@ const SignUp = () => {
     transaction: [],
     accountType: "saving",
     pin: "",
+    gender: "",
+    state: "open",
   });
 
   const [error, setError] = useState("");

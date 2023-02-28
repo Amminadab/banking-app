@@ -1,0 +1,27 @@
+@media (max-width: 60.87em) {
+  .main-home {
+    /* background-color: red; */
+    max-width: 85%;
+    margin: 0 5%;
+  }
+  .welcome-text {
+    margin-top: 4rem;
+  }
+}
+@media (max-width: 42.75em) {
+  .main-home {
+    /* background-color: red; */
+    max-width: 90%;
+  }
+  .welcome-text {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+}
+@media (max-width: 36.5em) {
+  .main-home {
+    /* background-color: red; */
+    max-width: 100%;
+    margin: 0 2.5%;
+  }
+}

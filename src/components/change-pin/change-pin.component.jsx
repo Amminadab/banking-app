@@ -28,14 +28,14 @@ const ChangePin = ({ pin, accountNumber }) => {
     } else {
       e.preventDefault();
 
-      // previos pin dont match
+      // previous pin don't match
       if (pin !== String(inputValues.oldPin)) {
         setStatus({
           type: "error",
           message: "you previous password doesn't match",
         });
       }
-      // the new pin and the confirm pin doesnt match
+      // the new pin and the confirm pin doesn't match
       else if (inputValues.confermPin !== inputValues.newPin) {
         setStatus({
           type: "error",
@@ -50,7 +50,7 @@ const ChangePin = ({ pin, accountNumber }) => {
           message: "password must be 4 - 8 charactes",
         });
       } else {
-        //seting the new password information
+        //setting the new password information
 
         const newAccountData = accountData.map((account) =>
           account.accountNumber === accountNumber
@@ -59,9 +59,6 @@ const ChangePin = ({ pin, accountNumber }) => {
         );
 
         setAccountData([...newAccountData]);
-        document.querySelector(".input4").value = "";
-        document.querySelector(".input5").value = "";
-        document.querySelector(".input6").value = "";
 
         setInputValues({
           oldPin: "",
@@ -89,7 +86,7 @@ const ChangePin = ({ pin, accountNumber }) => {
             onChange={changePinChangeHandler}
             name="oldPin"
             placeholder=""
-            className="input4"
+            value={inputValues.oldPin}
             required
           />
         </div>
@@ -100,7 +97,7 @@ const ChangePin = ({ pin, accountNumber }) => {
             onChange={changePinChangeHandler}
             name="newPin"
             placeholder=""
-            className="input5"
+            value={inputValues.newPin}
             required
           />
         </div>
@@ -111,7 +108,7 @@ const ChangePin = ({ pin, accountNumber }) => {
             onChange={changePinChangeHandler}
             name="confermPin"
             placeholder=""
-            className="input6"
+            value={inputValues.confermPin}
             required
           />
         </div>

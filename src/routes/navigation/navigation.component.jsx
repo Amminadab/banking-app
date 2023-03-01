@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { AccountContext } from "../../context/account/account.context";
 import { UserContext } from "../../context/user/user.context";
@@ -21,6 +21,14 @@ const Navigation = () => {
   const buttonManagement = () => {
     setClicked(false);
   };
+
+  useEffect(() => {
+    if (clicked) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "";
+    }
+  }, [clicked]);
 
   return (
     <>

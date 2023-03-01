@@ -130,7 +130,7 @@ input[type="checkbox"] {
   color: white;
 }
 .error-text {
-  background-color: rgba(207, 5, 5, 0.582);
+  background-color: rgba(207, 5, 5, 0.281);
 
   padding: 1rem 0;
   text-align: center;
@@ -140,7 +140,7 @@ input[type="checkbox"] {
   font-size: 1.4rem;
 }
 .success-text {
-  background-color: rgba(1, 156, 40, 0.63);
+  background-color: rgba(1, 156, 40, 0.356);
   padding: 1rem 0;
   text-align: center;
   margin-top: 1.3rem;

@@ -18,7 +18,7 @@
 .edit-pin .input-box-edit p {
   height: 4rem;
   outline: none;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   border-radius: 0.5rem;
   padding-left: 1.5rem;
   border: 1px solid #ccc;
@@ -31,7 +31,7 @@
 }
 .edit-pin .input-box-edit span {
   margin-bottom: 0.7rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 .edit-pin .button-r input {
   margin-top: 1.2rem;
@@ -41,7 +41,7 @@
   border: none;
   color: #fff;
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.1rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -50,4 +50,7 @@
 .edit-pin .button-r input:hover {
   /* trans.form: scale(0.99); */
   background: rgb(63, 63, 63);
+}
+.labels {
+  font-size: 1.5rem;
 }

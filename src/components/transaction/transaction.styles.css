@@ -4,7 +4,8 @@
   border: 1px solid black;
   border-radius: 12px;
   height: 27rem;
-  overflow: scroll;
+  overflow: auto;
+  overflow-y: scroll;
 }
 .each-transaction {
   display: flex;

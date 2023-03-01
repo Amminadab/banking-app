@@ -1,6 +1,7 @@
 @media (max-width: 55.25em) {
   .account-detail {
     grid-template-columns: 1fr 1fr;
+    gap: 3rem;
   }
   .balance {
     grid-column: 1/-1;

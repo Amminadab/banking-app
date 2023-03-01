@@ -80,7 +80,7 @@ const ChangePin = ({ pin, accountNumber }) => {
       )}
       <div className="edit-pin">
         <div className="input-box-edit">
-          <span className="details">Old PIN</span>
+          <span className="details labels">Old PIN</span>
           <input
             type="number"
             onChange={changePinChangeHandler}

@@ -7,7 +7,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    position: absolute;
+    position: fixed;
     top: 8rem;
     right: -28rem;
     width: 28rem;
@@ -15,7 +15,6 @@
     height: 100vh;
     padding-left: 3rem;
     padding-top: 3rem;
-    gap: 3.4rem;
     transition: 0.5s ease-in-out;
   }
   .link:link,
@@ -23,6 +22,6 @@
     font-size: 1.8rem;
   }
   .active {
-    right: 0rem;
+    right: 0;
   }
 }

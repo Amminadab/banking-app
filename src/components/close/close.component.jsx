@@ -17,6 +17,7 @@ const Close = () => {
 
   const closeClickHandler = (e) => {
     e.preventDefault();
+    window.scrollTo(0, 0);
 
     const [accountToClose] = accountData.filter(
       (account) => account.accountNumber === user.accountNumber

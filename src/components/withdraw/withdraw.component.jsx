@@ -9,6 +9,7 @@ const Withdraw = ({ balance }) => {
 
   const withdrawClickHandler = (e) => {
     e.preventDefault();
+    window.scrollTo(0, 0);
 
     //check if the box is empty
     if (amount === null || amount === "") {

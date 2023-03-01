@@ -15,6 +15,7 @@ const Transfer = ({ balance }) => {
 
   const transferClickHandler = (e) => {
     e.preventDefault();
+    window.scrollTo(0, 0);
 
     const [accountToTransferTo] = accountData.filter((accountTo) => {
       return accountTo.accountNumber === String(account);

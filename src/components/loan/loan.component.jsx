@@ -9,6 +9,7 @@ const Loan = () => {
 
   const loanClickHandler = (e) => {
     e.preventDefault();
+    window.scrollTo(0, 0);
 
     //check if the field is empty
     if (amount === null || amount === "") {

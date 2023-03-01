@@ -33,7 +33,9 @@ const ProcessAccount = () => {
       />
 
       {status.type && (
-        <p className={`${status.type}-text margin-m`}>{status.message}</p>
+        <p className={`${status.type}-text margin-m margin-t`}>
+          {status.message}
+        </p>
       )}
       <div className="process-container">
         <Transfer balance={balance} />

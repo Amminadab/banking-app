@@ -6,3 +6,27 @@
     width: 100%;
   }
 }
+@media (max-width: 584px) {
+  .container-r {
+    max-width: 100%;
+  }
+  .form .user-details .input-box {
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+  }
+  .form .category {
+    width: 100%;
+  }
+  .content .form .user-details {
+    max-height: 30rem;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+}
+@media (max-width: 459px) {
+  .container-r .content .category {
+    flex-direction: column;
+  }
+}

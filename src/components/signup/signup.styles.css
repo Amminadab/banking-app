@@ -44,13 +44,14 @@
   display: block;
   font-weight: 500;
   margin-bottom: 0.5rem;
+  font-size: 1.5rem;
 }
 .user-details .input-box input,
 .user-details .input-box select {
-  height: 3.6rem;
+  height: 4rem;
   width: 100%;
   outline: none;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   border-radius: 0.5rem;
   padding-left: 1.5rem;
   border: 1px solid #ccc;
@@ -145,27 +146,6 @@
   border-radius: 10px;
   font-size: 1.4rem;
 }
-@media (max-width: 584px) {
-  .container-r {
-    max-width: 100%;
-  }
-  .form .user-details .input-box {
-    margin-bottom: 1.5rem;
-    max-width: 100%;
-  }
-  .form .category {
-    width: 100%;
-  }
-  .content .form .user-details {
-    max-height: 30rem;
-    overflow-y: scroll;
-  }
-  .user-details::-webkit-scrollbar {
-    width: 0.5rem;
-  }
-}
-@media (max-width: 459px) {
-  .container-r .content .category {
-    flex-direction: column;
-  }
+.gender {
+  font-size: 1.4rem;
 }

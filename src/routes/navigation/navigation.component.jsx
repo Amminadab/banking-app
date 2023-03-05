@@ -30,6 +30,8 @@ const Navigation = () => {
     }
   }, [clicked]);
 
+  //click outside for responsive design
+
   const ref = useRef();
 
   useEffect(() => {

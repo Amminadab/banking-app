@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect, useRef } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { AccountContext } from "../../context/account/account.context";
 import { UserContext } from "../../context/user/user.context";
@@ -30,9 +30,20 @@ const Navigation = () => {
     }
   }, [clicked]);
 
+  const ref = useRef();
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!ref?.current?.contains(event.target)) {
+        setClicked(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+  }, [ref]);
+
   return (
     <>
-      <header className="header-main">
+      <header className="header-main" ref={ref}>
         <div className="logo">
           <h2>BANKING APP</h2>
         </div>
